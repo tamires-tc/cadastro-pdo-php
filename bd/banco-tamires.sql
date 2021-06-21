@@ -99,6 +99,32 @@ INSERT INTO `estados` VALUES (1,'Minas Gerais','MG'),(2,'São Paulo','SP'),(3,'R
 UNLOCK TABLES;
 
 --
+-- Table structure for table `logs`
+--
+
+DROP TABLE IF EXISTS `logs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `logs` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `usuario_resp` varchar(45) DEFAULT NULL,
+  `descricao` varchar(45) DEFAULT NULL,
+  `data_hora` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `logs`
+--
+
+LOCK TABLES `logs` WRITE;
+/*!40000 ALTER TABLE `logs` DISABLE KEYS */;
+INSERT INTO `logs` VALUES (2,'Tamires','Cadastro de usuario','2021-06-21 15:55:36'),(3,'Tamires','Alteração de usuario','2021-06-21 16:01:47'),(4,'Tamires','Exclusão de usuario:3','2021-06-21 16:05:56'),(5,'Tamires','Alteração de usuario:2','2021-06-21 16:06:20'),(6,'Tamires','Alteração de usuario:8','2021-06-21 16:08:38');
+/*!40000 ALTER TABLE `logs` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `usuarios`
 --
 
@@ -113,7 +139,7 @@ CREATE TABLE `usuarios` (
   `data_hora_criacao` datetime DEFAULT NULL,
   `data_hora_atualizacao` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -122,7 +148,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'tttttt','tttttt','tttttt',NULL,NULL),(2,'tttttt','tttttt','tttttt',NULL,NULL),(3,'tttttt','tttttt','tttttt',NULL,NULL),(8,'tttttt xxx','tttttt','tttttt','2021-06-20 19:58:46',NULL),(9,'Tamires de Oliveira','adm','ec6a6536ca304edf844d1d248a4f08dc','2021-06-20 20:16:08','2021-06-20 20:21:57'),(10,'Abner Luiz','ab','5a00958996b8f51987adeb2e8658d4a2','2021-06-20 20:22:24','2021-06-20 20:22:39');
+INSERT INTO `usuarios` VALUES (1,'Ciclano','tttttt','bcc720f2981d1a68dbd66ffd67560c37',NULL,'2021-06-21 16:01:47'),(2,'José da Silva','tttttt','bcc720f2981d1a68dbd66ffd67560c37',NULL,'2021-06-21 16:06:20'),(8,'tttttt xxx jjjjj','tttttt','bcc720f2981d1a68dbd66ffd67560c37','2021-06-20 19:58:46','2021-06-21 16:08:38'),(9,'Tamires de Oliveira','adm','ec6a6536ca304edf844d1d248a4f08dc','2021-06-20 20:16:08','2021-06-20 20:21:57'),(10,'Abner Luiz','ab','5a00958996b8f51987adeb2e8658d4a2','2021-06-20 20:22:24','2021-06-20 20:22:39'),(11,'Tamires de Oliveira','adm','7a41a3b7df2f1afb37f07ae506ddc903','2021-06-21 15:55:36',NULL);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -135,4 +161,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-21 15:01:27
+-- Dump completed on 2021-06-21 16:10:02

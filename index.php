@@ -44,6 +44,7 @@ date_default_timezone_set('America/Sao_Paulo');
                     ?>
                         <a href="?pg=area_restrita"><li>Área restrita</li></a>
                         <a href="?pg=usuario/usuarios"><li>Usuários</li></a>
+                        <a href="?pg=logs"><li>Logs</li></a>
                     <?php
                         }
                     ?>
